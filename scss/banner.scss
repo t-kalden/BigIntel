@@ -1,0 +1,72 @@
+// BANNER STYLES FOR 
+// ABOUT, SERVICES, CONTACT
+@import 'mixins';
+@import 'variables';
+
+* {
+    @include reset;
+}
+
+//BANNER CONTENT
+.banner {
+    position: relative;
+    height: 320px;
+    width: 100%;
+    @include center;
+    background: {
+        image: url(../imgs/banner-cover.jpeg);
+        size: cover;
+        position: bottom bottom;
+        repeat: no-repeat;
+        attachment: fixed;
+    }
+    h3 {
+        position: relative;
+        margin-top: 80px;
+        @include textSet($primary-color, default, $primary-font, 200);
+    }
+} // banner content
+.banner:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; 
+    left: 0;
+    // background: rgba(238, 245, 255, 0.2);
+    background: rgba(255, 250, 250, 0.2);
+}
+
+
+@media only screen and(max-width: 400px) {
+    .banner {
+        height: 200px;
+        
+        h3 {
+            margin-top: 80px;
+            font-size: 50px;
+        }
+    }//bannner
+    
+} //-> 400
+
+@media only screen and(min-width: 401px) and (max-width: 700px) {
+    .banner {
+        height: 220px;
+        
+        h3 {
+            margin-top: 80px;
+            font-size: 68px;
+        }
+    } //banner
+} // 401 -> 700
+
+@media only screen and (min-width:701px) {
+    .banner {
+        h3 {
+            font-size: 80px;
+        }
+    } // banner
+
+
+} // 701->

@@ -1,0 +1,61 @@
+@import 'mixins';
+@import 'variables';
+
+form {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    padding: 0;
+    input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        padding: 0;
+        border: 0px;
+        border-bottom: 1px solid $primary-color;
+        cursor: pointer;
+        @include textSet($primary-text-color, default, $primary-font, 200);
+        &:focus {
+            outline: none;
+            padding: 10px  0;
+        }
+    }
+    input.submit {
+        display: block;
+        height: 40px;
+        width: 200px;
+        margin: 0 auto;
+        color: $primary-color;
+        @include animate(.3s);
+        margin-top: 20px;
+        border: 1px solid $primary-color;
+        &:hover {
+            color: $secondary-color;
+            background: $light-background-color;
+        }
+    }
+    textarea {
+        padding: 0;
+        width: 100%;
+        height: 160px;
+        margin-bottom: 10px;
+        border: 0px;
+        border-bottom: 1px solid $primary-color;
+        @include textSet($primary-text-color, default, $primary-font, 200);
+        &:focus {
+            outline: none;
+            padding: 10px  0;
+        }
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    input, textarea {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    input, textarea {
+        font-size: 14px;
+    }
+}

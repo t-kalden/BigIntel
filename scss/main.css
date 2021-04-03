@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#main-container #top-banner {
+  height: 70%;
+  width: 100%;
+  background-image: url(../imgs/main-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#main-container #top-banner .title {
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+
+#main-container #top-banner .title h1 span {
+  margin: 0;
+  padding: 0;
+  color: #cc774d;
+}
+
+#main-container #top-banner .title a:hover button {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: #e7aa00;
+}
+
+#main-container #bottom-banner {
+  height: 30%;
+  width: 100%;
+  background: rgba(14, 100, 190, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#main-container #bottom-banner p.kicker {
+  color: #547593;
+  font-family: "Raleway", sans-serif;
+}
+
+#main-container #bottom-banner p.kicker span {
+  color: #cc774d;
+}
+
+#main-container #bottom-banner p.sub-kicker {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+}
+
+#teaser-container {
+  position: relative;
+  max-width: 1170px;
+  height: auto;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#teaser-container a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 20px 0;
+  position: relative;
+}
+
+#teaser-container a h6 {
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #cc774d;
+  font-size: default;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+}
+
+#teaser-container a:hover h6 {
+  color: #547593;
+}
+
+#teaser-container a.about {
+  background-image: url(../imgs/003-care-about-planet.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#teaser-container a.service {
+  background-image: url(../imgs/002-maintenance.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#teaser-container a.contact {
+  background-image: url(../imgs/001-mail.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#plug-wrapper {
+  background: rgba(14, 100, 190, 0.15);
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#plug-wrapper p {
+  color: #547593;
+  font-size: default;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+}
+
+#plug-wrapper p span {
+  color: #cc774d;
+}
+
+@media only screen and (max-width: 400px) {
+  #top-banner .title h1 {
+    color: #547593;
+    font-size: 40px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+  }
+  #top-banner .title h1 span {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+  }
+  #top-banner .title h3 {
+    position: relative;
+    margin-top: 80px;
+    max-width: 200px;
+    margin: 0 auto;
+    color: white;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+  }
+  #top-banner .title a {
+    position: relative;
+  }
+  #top-banner .title a button {
+    margin-top: 40px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border-outline: none;
+    background: #cc774d;
+    color: white;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+  }
+  #bottom-banner p.kicker {
+    font-size: 20px;
+  }
+  #bottom-banner p.kicker span {
+    font-size: 20px;
+  }
+  #bottom-banner p.sub-kicker {
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  #teaser-container a {
+    height: 120px;
+    width: 120px;
+    margin: 40px auto;
+    font-size: 40px;
+  }
+  #teaser-container a h6 {
+    line-height: 280px;
+  }
+  #plug-wrapper p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  #top-banner .title h1 {
+    color: #547593;
+    font-size: 60px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+  }
+  #top-banner .title h1 span {
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+  }
+  #top-banner .title h3 {
+    position: relative;
+    margin-top: 80px;
+    margin: 0 auto;
+    max-width: 300px;
+    color: white;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+  }
+  #top-banner .title a {
+    position: relative;
+  }
+  #top-banner .title a button {
+    margin-top: 40px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border-outline: none;
+    background: #cc774d;
+    color: white;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+  }
+  #bottom-banner p.kicker {
+    font-size: 20px;
+  }
+  #bottom-banner p.kicker span {
+    font-size: 20px;
+  }
+  #bottom-banner p.sub-kicker {
+    margin: 0 auto;
+    font-size: 22px;
+  }
+  #teaser-container a {
+    height: 140px;
+    width: 140px;
+    margin: 40px auto;
+  }
+  #teaser-container a h6 {
+    line-height: 320px;
+    font-size: 28px;
+  }
+  #plug-wrapper p {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  #top-banner .title h1 {
+    color: #547593;
+    font-size: 60px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+  }
+  #top-banner .title h1 span {
+    margin: 0;
+    padding: 0;
+    font-size: 70px;
+  }
+  #top-banner .title h3 {
+    position: relative;
+    margin-top: 80px;
+    margin: 0 auto;
+    color: white;
+    font-size: 26px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+  }
+  #top-banner .title a {
+    position: relative;
+  }
+  #top-banner .title a button {
+    margin-top: 40px;
+    height: 46px;
+    width: 110px;
+    border-radius: 5px;
+    border-outline: none;
+    background: #cc774d;
+    color: white;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+  }
+  #bottom-banner p.kicker {
+    font-size: 24px;
+  }
+  #bottom-banner p.kicker span {
+    font-size: 24px;
+  }
+  #bottom-banner p.sub-kicker {
+    margin: 0 auto;
+    font-size: 26px;
+  }
+  #teaser-container {
+    height: 280px;
+    max-width: 700px;
+    margin: inherit auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #teaser-container a {
+    height: 140px;
+    width: 140px;
+    font-size: 44px;
+  }
+  #teaser-container a h6 {
+    line-height: 380px;
+  }
+  #plug-wrapper p {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  #top-banner .title h1 {
+    color: #547593;
+    font-size: 80px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+  }
+  #top-banner .title h1 span {
+    font-size: 90px;
+  }
+  #top-banner .title h3 {
+    color: white;
+    font-size: 34px;
+    font-family: "Raleway", sans-serif;
+    font-weight: lighter;
+    margin: 0 auto;
+  }
+  #top-banner .title a {
+    position: relative;
+  }
+  #top-banner .title a button {
+    margin-top: 40px;
+    height: 50px;
+    width: 140px;
+    border-radius: 5px;
+    border-outline: none;
+    background: #cc774d;
+    color: white;
+    font-size: 22px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+  }
+  #bottom-banner p.kicker {
+    font-size: 30px;
+  }
+  #bottom-banner p.kicker span {
+    font-size: 30px;
+  }
+  #bottom-banner p.sub-kicker {
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  #teaser-container {
+    max-width: 900px;
+    margin: inherit auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 320px;
+  }
+  #teaser-container a {
+    height: 200px;
+    width: 200px;
+    font-size: 48px;
+  }
+  #teaser-container a h6 {
+    line-height: 520px;
+  }
+  #plug-wrapper p {
+    font-size: 28px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

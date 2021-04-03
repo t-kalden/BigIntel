@@ -1,0 +1,190 @@
+@import 'variables';
+@import 'mixins';
+
+//navbar
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+
+    // logo
+    .logo {
+        position: absolute;
+        z-index: 100;
+        line-height: 70px;
+        left: 80px;
+        
+    }
+
+    // icon
+    .icon-container {
+        height: 32px;
+        width: 32px;
+        margin-top: 14px;
+        position: absolute;
+        right: 80px;
+        z-index: 101;
+        cursor: pointer;
+
+        // hamburger
+        .hamburger {
+            height: 4px;
+            line-height: 80px;
+            width: 32px;
+            margin: 0 auto;
+            background: $primary-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @include animate(.3s);
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                height: 4px;
+                width: 32px;
+                background: $primary-color;
+                @include animate(.3s);
+                z-index: 100;
+            }
+            &:before {
+                top: -10px;
+            }
+            &:after {
+                bottom: -10px;
+            }
+        }// .hamburger
+    } // .icon contianer
+
+    .icon-container.active .hamburger {
+        background: rgba(0,0,0,0);
+        box-shadow: 0 0 0;
+        &:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            top: 0;
+        }// .icon.active .hamburger
+    }
+    
+    .nav-wrapper {
+        width: 100%;
+        background: $dark-background-color;
+        height: 100vh;
+        position: relative;
+        z-index: 99;
+        @include animate(.3s);
+        transform: translateY(-100%);
+        opacity: 0;
+
+        .nav-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            @include animate(.5s);
+            @include center();
+            li {
+                height: 48px;
+                line-height: 48px;
+
+                a {
+                    @include textSet($primary-color, default, $primary-font, 200);
+                }
+                a.special {
+                    color: rgb(150, 211, 251);
+                    font-weight: 300;
+                    text-shadow: 1px 1px $primary-color;
+                }
+                a, a.special {
+                    @include animate(.3s);
+                    &:hover {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    } // navwrapper
+
+    .nav-wrapper.pulldown {
+        opacity: 1;
+        transform: translateY(0);
+        .nav-container {
+            opacity: 1;
+        }
+    } //.nav-wrapper.pulldown
+} // nav-bar
+
+
+@media only screen and (max-width: 500px) {
+    .nav-bar {
+        background: $secondary-color;
+        .logo {
+            left: 20px;
+
+            a {
+                @include textSet($primary-color, 30px, $primary-font, lighter);
+        font-size: 26px;
+            }
+        }
+        .icon-container {
+            right: 20px;
+
+            .hamburger {
+                width: 26px;
+                height: 3px;
+                &:before, &:after {
+                    width: 26px;
+                    height: 3px;
+                }          
+                &:before {
+                    top: -8px;
+                }
+                &:after {
+                    bottom: -8px;
+                }      
+            }
+        }
+        .nav-wrapper {
+            .nav-container {
+                a {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+} //->500
+
+
+@media only screen and (min-width: 501px) {
+    .nav-bar {
+        .logo {
+            a {
+                @include textSet($primary-color, 36px, $primary-font, lighter);
+            }
+        }
+        .nav-wrapper {
+            .nav-container {
+                a {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+} // 501->
+
+@media only screen and(max-width: 1000px) {
+    .nav-bar {
+        .logo {
+            left: 20px;
+        }
+        .icon-container {
+            right: 20px;
+        }
+    }
+    
+}// logo left 20 and icon container right 20
+

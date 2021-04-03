@@ -1,0 +1,418 @@
+// ***IMPORT FILES***
+@import 'variables';
+@import 'mixins';
+
+// ***MAIN STYLES***
+* {
+    @include reset;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+#main-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    #top-banner {
+        height: 70%;
+        width: 100%;
+        background: {
+            image: url(../imgs/main-background.jpeg);
+            size: cover;
+            repeat: no-repeat;
+            position:center center;
+            attachment: fixed;
+        }
+        @include center;
+
+        .title {
+            height: auto;
+            width: auto;
+            text-align: center;
+
+            h1 {
+                span {
+                    margin:0;
+                    padding: 0;
+                    color: $primary-color;
+                }
+            } //h1
+
+            a {
+                &:hover {
+                    button {
+                        @include animate(.3s);
+                        cursor: pointer;
+                        background: $tertiary-color;
+                    }
+                }
+            }
+        } //title
+
+    }// top banner
+
+
+    #bottom-banner {
+        height: 30%;
+        width: 100%;
+        background: $light-background-color;
+        @include center;
+
+        p.kicker {
+            color: $secondary-color;
+            font-family: $secondary-font;
+            span {
+                color: $primary-color;
+            }
+        } // p.kicker
+
+        p.sub-kicker {
+            margin-top: 10px;
+            color: rgba(0,0,0,.4);
+            font-family: $primary-font;
+            font-weight: 200;
+        }
+    } // bottom-banner
+} 
+#teaser-container {
+    position: relative;
+    max-width: 1170px;
+    height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+    a {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 20px 0;
+        position: relative;
+            h6 {
+                text-align: center;
+                @include animate(.3s);
+                @include textSet($primary-color, default, $primary-font, 100);
+            }
+        &:hover {
+
+            h6 {
+                color: $secondary-color;
+            }
+        }
+    }
+    a.about {
+        background: {
+            image: url(../imgs/003-care-about-planet.png);
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+        }
+    }
+    a.service {
+        background: {
+            image: url(../imgs/002-maintenance.png);
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+        }
+    }
+    a.contact {
+        background: {
+            image: url(../imgs/001-mail.png);
+            repeat: no-repeat;
+            position: center center;
+            size: cover;
+        }
+    }
+}//teaser container
+
+#plug-wrapper {
+    background: $light-background-color;
+    height: 300px;
+    width: 100%;
+    @include center;
+
+    p {
+        @include textSet($secondary-color, default, $primary-font, 200);
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+//MAIN CONTENT
+
+@media only screen and (max-width: 400px) {
+    #top-banner {
+        .title {
+            h1 {
+                @include textSet($secondary-color, 40px, $primary-font, 400);
+
+                span {
+                    margin:0;
+                    padding: 0;
+                    font-size: 50px;
+                }
+            }
+            h3 {
+                position: relative;
+                margin-top: 80px;
+                max-width: 200px;
+                margin: 0 auto;
+                @include textSet(white, 18px, $secondary-font, 300);
+            }
+            a {
+                position: relative;
+                button {
+                    margin-top: 40px;
+                    height: 40px;
+                    width: 100px;
+                    border: {
+                        radius: 5px;
+                        outline: none;
+                    }
+                    background: $primary-color;
+                    @include textSet(white, 16px, $secondary-font, 200);
+                }
+            }
+        }
+    }
+    #bottom-banner {
+        p.kicker {
+            font-size: 20px;
+            span{
+                font-size: 20px;
+            }
+        }
+        p.sub-kicker {
+            margin: 0 auto;
+            font-size: 20px;
+        }
+    } // bottom banner
+    #teaser-container {
+        a {
+            height: 120px;
+            width: 120px;
+            margin: 40px auto;
+            font-size: 40px;
+            h6 {
+                line-height: 280px;
+            }
+        }
+    }
+    #plug-wrapper {
+        p {
+            font-size: 20px;
+        }
+    }
+   
+} // ->400
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    #top-banner {
+        .title {
+            h1 {
+                @include textSet($secondary-color, 60px, $primary-font, 400);
+
+                span {
+                    margin:0;
+                    padding: 0;
+                    font-size: 70px;
+                }
+            }
+            h3 {
+                position: relative;
+                margin-top: 80px;
+                margin: 0 auto;
+                max-width: 300px;
+                @include textSet(white, 24px, $secondary-font, 300);
+            }
+            a {
+                position: relative;
+                button {
+                    margin-top: 40px;
+                    height: 40px;
+                    width: 100px;
+                    border: {
+                        radius: 5px;
+                        outline: none;
+                    }
+                    background: $primary-color;
+                    @include textSet(white, 16px, $secondary-font, 200);
+                }
+            }
+        }
+    } //top banner
+    #bottom-banner {
+        p.kicker {
+            font-size: 20px;
+            span{
+                font-size: 20px;
+            }
+        }
+        p.sub-kicker {
+            margin: 0 auto;
+            font-size: 22px;
+        }
+    } // bottom banner
+
+    #teaser-container {
+        a {
+            height: 140px;
+            width: 140px;
+            margin: 40px auto;
+            h6 {
+                line-height: 320px;
+                font-size: 28px;
+            }
+        }
+    } // teaser-container
+
+    #plug-wrapper {
+        p {
+            font-size: 24px;
+        }
+    }
+} // 401 -> 600
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #top-banner {
+        .title {
+            h1 {
+                @include textSet($secondary-color, 60px, $primary-font, 400);
+
+                span {
+                    margin:0;
+                    padding: 0;
+                    font-size: 70px;
+                }
+            }
+            h3 {
+                position: relative;
+                margin-top: 80px;
+                margin: 0 auto;
+                @include textSet(white, 26px, $secondary-font, 300);
+            }
+            a {
+                position: relative;
+                button {
+                    margin-top: 40px;
+                    height: 46px;
+                    width: 110px;
+                    border: {
+                        radius: 5px;
+                        outline: none;
+                    }
+                    background: $primary-color;
+                    @include textSet(white, 18px, $secondary-font, 200);
+                }
+            }
+        }
+    } //top banner
+    #bottom-banner {
+        p.kicker {
+            font-size: 24px;
+            span{
+                font-size: 24px;
+            }
+        }
+        p.sub-kicker {
+            margin: 0 auto;
+            font-size: 26px;
+        }
+    } // bottom banner
+
+    #teaser-container {
+        height: 280px;
+        max-width: 700px;
+        margin: inherit auto;
+        display: flex;
+        justify-content: space-around;
+        a {
+            height: 140px;
+            width: 140px;
+            font-size: 44px;
+            h6 {
+                line-height: 380px;
+
+            }
+        }
+    } // teaser container
+    #plug-wrapper {
+        p {
+            font-size: 28px;
+        }
+    }
+} // 601 -> 800 
+
+@media only screen and (min-width:801px ) {
+    #top-banner {
+        .title {
+            h1 {
+                @include textSet($secondary-color, 80px, $primary-font, 400);
+                span {
+                    font-size: 90px;
+                }
+
+            }
+            h3 {
+                @include textSet(white, 34px, $secondary-font, lighter);
+                margin: 0 auto;
+            }
+            a {
+                position: relative;
+                button {
+                    margin-top: 40px;
+                    height: 50px;
+                    width: 140px;
+                    border: {
+                        radius: 5px;
+                        outline: none;
+                    }
+                    background: $primary-color;
+                    @include textSet(white, 22px, $secondary-font, 200);
+                }
+            }
+        }
+    } //topbanner
+    #bottom-banner {
+        p.kicker {
+            font-size: 30px;
+            span{
+                font-size: 30px;
+            }
+        }
+        p.sub-kicker {
+            margin: 0 auto;
+            font-size: 30px;
+        }
+    } // bottom banner
+    #teaser-container {
+        max-width: 900px;
+        margin: inherit auto;
+        display: flex;
+        justify-content: space-around;
+        height: 320px;
+        a {
+            height: 200px;
+            width: 200px;
+            font-size: 48px;
+
+                h6 {
+                    line-height: 520px;
+                }
+        }
+    } // teaser container
+    #plug-wrapper {
+        p {
+            font-size: 28px;
+        }
+    }
+} // 801 ->
+
+
+
+
+
+
+

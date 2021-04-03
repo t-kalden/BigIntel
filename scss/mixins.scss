@@ -1,0 +1,26 @@
+@mixin textSet ($color, $size, $family, $weight) {
+    color: $color;
+    font: {
+        size: $size;
+        family: $family;
+        weight: $weight;
+    }
+}
+
+@mixin reset() {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+ @mixin animate($dur) {
+    transition: all $dur ease-in-out;
+ }
+
+ @mixin center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+ }

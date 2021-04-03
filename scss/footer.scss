@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+    height: 200px;
+    background: $dark-background-color;
+    @include center;
+
+    p {
+        @include textSet(lightgrey,default, $secondary-font, 200);
+        a {
+            color: white;
+            @include animate(.3s);
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .footer {
+        height: 100px;
+    }
+    p {
+        font-size: 12px;
+    }
+}

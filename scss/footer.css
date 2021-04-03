@@ -1,0 +1,42 @@
+.footer {
+  height: 200px;
+  background: rgba(84, 117, 147, 0.96);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.footer p {
+  color: lightgrey;
+  font-size: default;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
+.footer p a {
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer p a:hover {
+  color: #e7aa00;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    height: 100px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

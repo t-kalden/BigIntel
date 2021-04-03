@@ -1,0 +1,230 @@
+.content-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  height: auto;
+}
+
+.content-wrapper .mini-title h1 {
+  color: #547593;
+  font-size: default;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.content-wrapper .mini-title h1 span {
+  color: #cc774d;
+}
+
+.content-wrapper .content-container {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #7c8081;
+}
+
+.content-wrapper .content-container .subtitle h4 {
+  margin-top: 15px;
+  color: #547593;
+  font-size: default;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.content-wrapper .content-container .img {
+  height: 140px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.content-wrapper .content-container .identity {
+  background-image: url(../imgs/identity.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper .content-container .vision {
+  background-image: url(../imgs/vision.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper .content-container .pi {
+  background-image: url(../imgs/pi.jpeg);
+  background-size: cover;
+  background-position: top center;
+}
+
+.content-wrapper .content-container .security {
+  background-image: url(../imgs/security.jpeg);
+  background-size: cover;
+  background-position: top center;
+}
+
+.content-wrapper .content-container .fire {
+  background-image: url(../imgs/fire.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper .content-container .contact {
+  background-image: url(../imgs/contact.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper .content-container .content {
+  height: auto;
+  width: 96%;
+  margin: 5px auto;
+  color: #7c8081;
+  font-size: default;
+  font-family: helvetica, serif;
+  font-weight: 200;
+}
+
+.content-wrapper .content-container .content p {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2px 0;
+  text-indent: 0;
+}
+
+.content-wrapper .content-container .content ul {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.content-wrapper .content-container .content ul li {
+  color: "Josefin Sans", sans-serif;
+  font-size: default;
+  font-family: #7c8081;
+  font-weight: 200;
+}
+
+.content-wrapper .content-container .content ul li:before {
+  content: '';
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+  background-image: url(../imgs/magnifying.png);
+  background-size: cover;
+}
+
+.content-container:nth-last-child(1) {
+  border: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .content-wrapper {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+  }
+  .content-wrapper .mini-title {
+    width: 100%;
+  }
+  .content-wrapper .mini-title h1 {
+    font-size: 40px;
+  }
+  .content-wrapper .content-container .subtitle h4 {
+    font-size: 24px;
+  }
+  .content-wrapper .content-container .img {
+    height: 140px;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .content-wrapper .content-container .content {
+    margin-bottom: 10px;
+  }
+  .content-wrapper .content-container .content p {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+  .content-wrapper .content-container .content ul {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .content-wrapper .content-container .content ul li {
+    font-size: 11px;
+  }
+  .content-wrapper .content-container .content ul li:before {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 700px) {
+  .content-wrapper {
+    width: 80%;
+    margin: 30px auto;
+    height: auto;
+  }
+  .content-wrapper .content-container {
+    padding-bottom: 16px;
+  }
+  .content-wrapper .content-container .subtitle {
+    font-size: 26px;
+  }
+  .content-wrapper .content-container .subtitle .mini-title {
+    width: 100%;
+  }
+  .content-wrapper .content-container .subtitle .mini-title h1 {
+    font-size: 50px;
+  }
+  .content-wrapper .content-container .img {
+    height: 140px;
+  }
+  .content-wrapper .content-container .content p {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+  .content-wrapper .content-container .content ul {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .content-wrapper .content-container .content ul li {
+    font-size: 13px;
+  }
+  .content-wrapper .content-container .content ul li:before {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media only screen and (min-width: 701px) {
+  .content-wrapper {
+    width: 76%;
+    margin: 30px auto;
+    height: auto;
+  }
+  .content-wrapper .mini-title {
+    width: 100%;
+  }
+  .content-wrapper .mini-title h1 {
+    font-size: 58px;
+  }
+  .content-wrapper .content-container {
+    padding-bottom: 20px;
+  }
+  .content-wrapper .content-container .subtitle {
+    font-size: 30px;
+  }
+  .content-wrapper .content-container .content p {
+    font-size: 18px;
+  }
+  .content-wrapper .content-container .content ul {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .content-wrapper .content-container .content ul li {
+    font-size: 20px;
+  }
+  .content-wrapper .content-container .content ul li :before {
+    height: 20px;
+    width: 20px;
+  }
+}
+/*# sourceMappingURL=content.css.map */
